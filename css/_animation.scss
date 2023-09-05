@@ -11,9 +11,7 @@
 }
 
 @keyframes showup {
-    0% {opacity:0;}
-    20% {opacity:1;}
-    80% {opacity:1;}
+    30% {opacity:0;}
     100% {opacity:1;}
 }
 
@@ -31,6 +29,27 @@
     100% { margin-right:0px; }
 }
 
+@keyframes slideleftslow {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    85% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes sliderightslow {
+    0% { margin-right:-800px; }
+    20% { margin-right:-800px; }
+    85% { margin-right:0px; }
+    100% { margin-right:0px; }
+}
+
+@keyframes sliderightslow1 {
+    0% { margin-left:800px; }
+    20% { margin-left:800px; }
+    85% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
 
 @keyframes reveal {
     0% {opacity:0;width:0px;}
@@ -38,4 +57,47 @@
     30% {width:355px;}
     80% {opacity:1;}
     100% {opacity:0;width:355px;}
+}
+
+@keyframes rotate {
+    100% {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn);
+    }
+}
+
+  
+@keyframes scroll {
+    from {
+        top: 10%;
+    }
+    to {
+        top: -75%;
+    }
+}
+
+
+@keyframes slideleftbig {
+    0% { margin-left:-1500px; }
+    // 20% { margin-left:-1500px; }
+    85% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes sliderightbig {
+    0% { margin-left:1500px; }
+    // 20% { margin-left:1500px; }
+    85% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes handwave {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
 }
