@@ -147,6 +147,12 @@
 }
 
 @media (max-width: 576px) {
+
+    .container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
     .nav {
         &-list {
             position: fixed;
@@ -155,19 +161,22 @@
             align-items: center;
             top: 0;
             left: -100%;
-            width: 50%;
+            width: 100%;
             height: 100vh;
             padding: 20px 15px;
             background-color: rgba(0,0,0, 0.8);
             transition: 0.6s all;
             &-active {
-                left: 0;
+                left: 0 !important;
+                width: 100%;
             }
-            // &_item {
-            //     padding-right: 0;
-            //     border: none;
-            //     margin-top: 10px;
-            // }
+
+            &-item {
+                font-size: 25px;
+                color: #fff;
+                width: 100%;
+                text-align: center;
+            }
             // &_link {
             //     font-size: 20px;
             // } 
@@ -176,10 +185,77 @@
     .hamburger {
         display: block;
     }
-    .nav {
-        &-list {
-            // display: none;
+    .intro {
+        &__greeting {
+            flex-direction: column;
+
+            &-text {
+                order: 1;
+                width: 100%;
+            }
         }
 
-    }   
+        &__subtitle {
+            font-size: 25px;
+        }
+
+        &-image {
+            animation: sliderightslow1 3s;
+        }
+
+        &__list {
+            padding: 0 5px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+    
+    .about {
+
+        &__title {
+            font-size: 24px;
+            margin-top: 15px;
+        }
+
+        &__subtitle {
+            font-size: 20px;
+        }
+
+        &__description {
+            width: 100%;
+            padding: 5px;
+            text-align: center;
+        }
+    }
+
+    .projects {
+
+        &__card {
+            &-image {
+                width: 95%;
+                height: 205px;
+            }
+        }
+
+        &__stack {
+            flex-wrap: wrap;
+        }
+    }
+    
+    .contacts {
+        &-subtitle {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .contacts {
+        &-subtitle {
+            height: auto;
+        }
+    }
 }

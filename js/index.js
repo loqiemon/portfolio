@@ -35,8 +35,6 @@ const observer = new IntersectionObserver(animate, { rootMargin: "-75px" });
 observer.observe(aboutPhoto);
 
 
-
-
 const projectOlympiad = document.getElementById('olympiad');
 const projectUber = document.getElementById('uber');
 const projectCrud = document.getElementById('crud');
