@@ -333,14 +333,29 @@ html {
         font-weight: 500;
         height: 60%;
         overflow-y: hidden;
+        overflow-y: scroll;
         position: relative;
+        &::-webkit-scrollbar {
+            width: 5px;              
+        }
 
+        &::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0);
+        }
+          
+        &::-webkit-scrollbar-thumb {
+            background-color: #555;    
+            border-radius: 20px;     
+        }
+        scrollbar-width: thin;
+        scrollbar-color: #555 rgba(0,0,0,0);  
+        
         &-text {
             position: absolute;
             top: 0;
-            animation: scroll 5.5s linear infinite;
+            animation: scroll 10s linear infinite;
             cursor: grab;
-
+            // overflow-y: scroll;
             &.paused {
                 animation-play-state: paused;
             }
